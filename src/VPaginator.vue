@@ -54,7 +54,7 @@ export default {
       var self = this
       this.$http.get(pageUrl, { headers: this.config.headers })
       .then(function (response) {
-        self.handleResponseData(response.body.json())
+        self.handleResponseData(response.json())
       }).catch(function (response) {
         console.log('Fetching data failed.', response)
       })
